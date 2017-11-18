@@ -4,10 +4,27 @@
              xmlns:local="clr-namespace:EmotionsApp"
              x:Class="EmotionsApp.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <ScrollView>
+
+            <StackLayout>
+
+                <Button x:Name="takePhoto" Text="Take Photo" />
+
+                <Image x:Name="image"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand" />
+
+                <ActivityIndicator x:Name="IsLoading" 
+                                   IsRunning="True"
+                                   IsVisible="False" />
+
+                <Button Text="Analize" 
+                        Clicked="Button_Clicked" />
+
+            </StackLayout>
+            
+        </ScrollView>
+
     </ContentPage.Content>
 </ContentPage>
